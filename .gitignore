@@ -1,0 +1,25 @@
+node_modules/
+dist/
+build/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ml data & artifacts (large / user-collected — not committed)
+ml/data/raw/*
+!ml/data/raw/.gitkeep
+ml/data/processed/*
+!ml/data/processed/.gitkeep
+ml/models_out/*
+!ml/models_out/.gitkeep
+
+# db
+apps/server/drizzle/*.sql

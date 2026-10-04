@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: isl_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: isl_user
+      POSTGRES_PASSWORD: isl_password
+      POSTGRES_DB: isl_translator
+    ports:
+      - "5432:5432"
+    volumes:
+      - isl_pg_data:/var/lib/postgresql/data
+
+volumes:
+  isl_pg_data:

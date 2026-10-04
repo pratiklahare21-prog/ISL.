@@ -1,0 +1,24 @@
+{
+  "name": "isl-live-translator",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Live Indian Sign Language to speech translator — webcam -> landmarks -> model -> text -> voice",
+  "workspaces": [
+    "apps/web",
+    "apps/server",
+    "packages/shared"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace=apps/web",
+    "dev:server": "npm run dev --workspace=apps/server",
+    "build:shared": "npm run build --workspace=packages/shared",
+    "build:web": "npm run build --workspace=apps/web",
+    "build:server": "npm run build --workspace=apps/server",
+    "db:generate": "npm run db:generate --workspace=apps/server",
+    "db:migrate": "npm run db:migrate --workspace=apps/server",
+    "db:studio": "npm run db:studio --workspace=apps/server"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}
